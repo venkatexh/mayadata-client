@@ -10,10 +10,14 @@ const MeetingItem = (props) => {
       <div className={"item"}>{name}</div>
       <div className={"item"}>{count}</div>
       <div className={"item"}>
-        {moment(date, "YYYY-MM-DD").format("DD/MM/YYYY")}
+        {props.header ? date : moment(date, "YYYY-MM-DD").format("DD/MM/YYYY")}
       </div>
-      <div className={"item"}>{moment(startTime, "hh:mm").format("LT")}</div>
-      <div className={"item"}>{moment(endTime, "hh:mm").format("LT")}</div>
+      <div className={"item"}>
+        {props.startTime ? startTime : moment(startTime, "hh:mm").format("LT")}
+      </div>
+      <div className={"item"}>
+        {props.endTime ? endTime : moment(endTime, "hh:mm").format("LT")}
+      </div>
       <div className={"item"}>
         {props.header ? (
           "Action"
