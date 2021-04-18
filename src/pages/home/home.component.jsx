@@ -28,7 +28,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchMeetings());
-  }, [refresh]);
+  }, [refresh, dispatch]);
 
   const state = useSelector(({ meetingList, navbarStatus }) => ({
     meetingList,

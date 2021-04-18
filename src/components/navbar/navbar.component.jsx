@@ -1,16 +1,14 @@
-import { useState } from "react";
-import "./navbar.styles.scss";
-import hamburger from "../../assets/images/hamburger.svg";
-import { selectMenuItem } from "../../redux/actions/selectMenuItem";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { setNavbarCollapsed } from "../../redux/actions/setNavbarCollapsed";
+import { selectMenuItem } from "../../redux/actions/selectMenuItem";
+import hamburger from "../../assets/images/hamburger.svg";
 import home from "../../assets/images/home.svg";
 import about from "../../assets/images/about.svg";
-import { setNavbarCollapsed } from "../../redux/actions/setNavbarCollapsed";
+import "./navbar.styles.scss";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const state = useSelector(({ menuItem, navbarStatus }) => ({
     menuItem,
