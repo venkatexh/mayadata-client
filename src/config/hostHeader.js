@@ -1,3 +1,3 @@
 export const hostHeader = {
-  url: "http://localhost:7000",
+  url: "https://mayadata-server.herokuapp.com",
 };
